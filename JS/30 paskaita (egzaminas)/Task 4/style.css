@@ -3,8 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 /* Mobile first */
@@ -26,4 +25,30 @@
 .container h1 {
   margin-top: 50px;
   color: #333;
+}
+
+/* mano stilius */
+#output {
+  max-width: 80%;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.card {
+  width: 100%;
+  box-shadow: 2px 5px 13px 0px rgba(0, 0, 0, 0.73);
+  text-align: center;
+  border-radius: 7px;
+  transition: 1s;
+
+  overflow: hidden;
+}
+.card p {
+  text-align: left;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  border-bottom: 0.3px solid black;
 }
