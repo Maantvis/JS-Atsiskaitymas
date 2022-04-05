@@ -3,8 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
-    'Lucida Sans', Arial, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 /* Mobile first */
@@ -63,3 +62,14 @@ form {
     font-size: 2em;
   }
 }
+
+/* mano css */
+
+#output {
+  text-align: center;
+}
+
+#output span {
+  color: rgb(255, 255, 255);
+}
+/* del stiliaus nesugalvoju ka nors daugiau... (truksta ideju...) */

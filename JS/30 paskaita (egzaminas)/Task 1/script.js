@@ -8,3 +8,31 @@ pamatyti jo pateikto svorio kovertavimą į:
 Pastaba: atvaizdavimas turi būti matomas pateikus formą ir pateikiamas
 <div id="output"></div> viduje, bei turi turėti bent minimalų stilių;
 ------------------------------------------------------------------- */
+
+const formEl = document.forms[0];
+const inputEl = document.getElementById("search");
+const divEl = document.getElementById("output");
+formEl.addEventListener("submit", (e) => {
+  e.preventDefault();
+  inputElValue = inputEl.value;
+  const svarai = svaruSkaiciavimas(inputElValue);
+  const gramai = gramuSkaiciavimas(inputElValue);
+  const uncijos = uncijosSkaiciavimas(inputElValue);
+  divEl.innerHTML = `
+  <h2>Jusu ivedet : <span>${inputElValue} </span>kg </h2>
+  <h2>Jusu svoris svarais yra: <span>${svarai}</span>  lb</h2>
+    <h2>Jusu svoris gramais yra: <span>${gramai}</span> g</h2>
+    <h2>Jusu svoris uncijom yra: <span>${uncijos}</span> oz</h2>`;
+
+  inputEl.value = "";
+});
+
+function svaruSkaiciavimas(kg) {
+  return kg * 2.2046;
+}
+function gramuSkaiciavimas(kg) {
+  return kg / 0.001;
+}
+function uncijosSkaiciavimas(kg) {
+  return kg * 35.274;
+}
